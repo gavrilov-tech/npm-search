@@ -1,11 +1,17 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+
+import Search from './pages/Search';
+import { store } from './store';
 
 const App: React.FC = () => {
   return (
-    <h1>
-      NPM SEARCH
-    </h1>
+    <React.StrictMode>
+      <Provider store={store}>
+        <Search />
+      </Provider>
+    </React.StrictMode>
   );
 };
 
