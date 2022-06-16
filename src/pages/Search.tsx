@@ -4,7 +4,7 @@ import { Input, RepositoryList } from '../components';
 import { useActions, useSelector } from '../hooks';
 
 const Search: React.FC = () => {
-  const { isFetching, repositories, error } = useSelector((state) => state.repositories);
+  const { repositories, error } = useSelector((state) => state.repositories);
   const { getRepositories } = useActions();
 
   const handleSearch = (query: string) => {
@@ -16,7 +16,7 @@ const Search: React.FC = () => {
       <h1>
         NPM SEARCH
       </h1>
-      <Input title="Search" disabled={isFetching} onSearch={handleSearch} />
+      <Input onSearch={handleSearch} />
       {repositories.length > 0 && (
         <RepositoryList repositories={repositories} />
       )}

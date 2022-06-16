@@ -2,8 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
-import Search from './pages/Search';
 import { store } from './store';
+import Search from './pages/Search';
 
 const App: React.FC = () => {
   return (

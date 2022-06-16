@@ -1,5 +1,5 @@
-import { Dispatch } from 'redux';
 import axios from 'axios';
+import { Dispatch } from 'redux';
 
 import {
   GetRepositoryFailureAction,
